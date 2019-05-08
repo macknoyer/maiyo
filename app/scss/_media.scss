@@ -11,7 +11,10 @@
 // ≥992px
 @include media-breakpoint-down(md) {
 		.video-background {
-			display: none;
+			// display: none;
+			width: 100%;
+			margin: auto;
+			text-align: center;
 	}
 	.logo {
 		margin-top: 0px;
@@ -23,7 +26,6 @@
 		}
 	}
 	.options_list  {
-		text-align: center;
 		li {
 			font-size: 18px;
 

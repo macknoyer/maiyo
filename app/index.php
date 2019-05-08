@@ -333,13 +333,13 @@
 		</div>
 	</div>
 
-<!-- <footer>
+<footer>
 	<div class="container">
 		<div class="row justify-content-center">
-			Все права защищены. 2018 &copy; 
+			Полная версия сайта в разработке
 		</div>
 	</div>
-</footer> -->
+</footer>
 	<!--Include the Vimeo API Library-->
 	<!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
 	<!--Select and manipulate your video-->

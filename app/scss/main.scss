@@ -58,7 +58,7 @@ b, strong {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.6);
 
 }
 .logo {
@@ -78,11 +78,12 @@ b, strong {
 	padding: 0;
 	margin: 0;
 	margin-bottom: 30px;
+	text-align: center;
 	li {
 		display: inline-block;
-		color: $accent;
-		font-family: 'PT Sans', sans-serif;
-		font-size: 18px;
+		color: #fff;
+		font-family: 'Roboto', sans-serif;
+		font-size: 28px;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		// font-weight: bold;
@@ -205,6 +206,13 @@ b, strong {
     0 0 110px $accent,
     0 0 160px $accent;
   }
+}
+.modal-content,.form-control,.btn {
+	border-radius: 0;
+	outline: none;
+}
+.btn {
+	color: #fff;
 }
 .phones {
 	margin-top: 30px;
