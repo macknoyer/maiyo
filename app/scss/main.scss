@@ -3,7 +3,8 @@
 @import "libs";
 
 ::placeholder {
-	color: #666;
+	color: #333;
+	opacity: 1;
 }
 
 ::selection {
@@ -14,10 +15,10 @@
 body {
 	height: 100vh;
 	max-height: 100vh;
+	min-height: 830px;
 	background-color: #111;
 	font-size: 16px;
 	min-width: 320px;
-	min-height: 530px;
 	position: relative;
 	line-height: 1.65;
 	font-family: $default-font;
@@ -170,7 +171,54 @@ b, strong {
 
 		}
 	}
-}.rainbow-button {
+}
+
+.button {
+	cursor: pointer;
+	margin-top: 30px;
+	outline: none !important;
+	border: 1px solid #fff;
+	color: #fff;
+	height: 44px;
+	line-height: 42px;
+	padding: 0 30px;
+	display: inline-block;
+	margin-right: 20px;
+	background: transparent;
+	font-weight: bold;
+	transition: all ease 0.3s;
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover {
+		border-color: transparent;
+		background-color: $accent;
+		color: #333;
+	}
+	&.green {
+		border-color: transparent;
+		background: $accent;
+		color: #333;
+		// &:hover {
+		// 	border-color: #fff;
+		// 	background: transparent;
+		// 	color: #fff;
+
+		// }
+	}
+	&.form {
+		color: #333;
+		border-color: #333;
+		margin-right: 0;
+		&:hover {
+			border-color: #333;
+			background-color: transparent;
+		}
+
+	}
+}
+
+.rainbow-button {
 	
 	text-shadow:
     0 0 5px #fff,
@@ -211,6 +259,87 @@ b, strong {
 	border-radius: 0;
 	outline: none;
 }
+.modal-dialog {
+	max-width: 748px;
+	min-width: 320px;
+}
+.modal-content {
+	background-color: $accent;
+	border: none;
+}
+.modal-title {
+	font-weight: bold;
+	border-bottom: none !important;
+}
+.modal-header{
+	border-bottom: none !important;
+	.close {
+		    padding: 0.5rem 1rem;
+		    font-size: 2.5rem;
+			color: #333;
+			text-shadow: none;
+			opacity: 1;
+			&:focus, &:hover {
+				opacity: 1;
+			}
+	}
+}
+.form {
+	&__input{
+		border: none;
+		border-bottom: 1px solid #333;
+		background: none;
+		height: 34px;
+		font-size: 16px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		padding: 0 5px;
+		width: 100%;
+		display: block;
+		color: #333;
+	}
+	&__container {
+		margin-bottom: 20px;
+	}
+	&__checkbox {
+		visibility: hidden;
+		position: absolute;
+		left: 0;
+		&+label {
+			margin-bottom: 0;
+			position: relative;
+			cursor: pointer;
+			padding-left: 30px;
+			line-height: 24px;
+			font-weight: bold;
+				&:before {
+					content: "";
+					font-family: 'Font Awesome 5 Free';
+					font-weight: 900;
+					width: 20px;
+					height: 20px;
+					border: 1px solid #333;
+					display: inline-block;
+					background: none;
+					position: absolute;
+					left: 0;
+					top: 3px;
+					color: #333;
+					line-height: 18px;
+					font-size: 10px;
+					text-align: center;
+				}	   
+			}
+			&:checked+label {
+				&:before {
+					content:'\f00c';
+				}
+			}
+		&-container {
+			position: relative;
+		}
+	}
+}
 .btn {
 	color: #fff;
 }
@@ -225,6 +354,7 @@ b, strong {
 		text-decoration: none;
 		margin-bottom: 10px;
 		transition: all ease .3s;
+		display: inline-block;
 		&:hover {
 			text-decoration: none;
 			color: $accent;

@@ -6,8 +6,8 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
-	<meta name="description" content="">
+	<title>MAIYO</title>
+	<meta name="description" content="Тарегетированная реклама в Уфе. SMM агентство в Уфе">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -35,11 +35,11 @@
 	</div>
 		<!-- <div class="vimeo-wrapper"> -->
 <!--    			<iframe id="embeddedVideo" src="https://player.vimeo.com/video/35539348?background=0&autoplay=1&loop=1&byline=0&title=0#t=18s"
-           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen data-ready="true"></iframe> -->
+		   frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen data-ready="true"></iframe> -->
 <!-- 			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/35539348?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
 		<!-- </div> -->
 		<div class="video-background" style="width: 100%; height: 100vh;"
-  			data-vide-bg="video/bg.mp4" data-vide-options="loop: false, muted: false, position: 0% 0%">
+			data-vide-bg="video/bg.mp4" data-vide-options="loop: false, muted: false, position: 0% 0%">
 		</div>
 		<div class="container-fluid">
 			<div class="row justify-content-center">
@@ -269,9 +269,12 @@
 			<div class="text__header animated fadeIn">Мы помагаем вашему бизнесу расцветать</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-12 justify-content-center d-flex">
-			<button class="rainbow-button" alt="Напишите нам" data-toggle="modal" data-target="#exampleModal">Напишите нам</button>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 d-lg-flex justify-content-center">
+				<button class="button" alt="Напишите нам" data-toggle="modal" data-target="#exampleModal">Напишите нам</button>
+				<button class="button green" alt="Заполнить анкету">Заполнить анкету</button>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -301,33 +304,23 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="contactForm" action="handler.php" method="post">
-						<div class="form-group">
-							<label for="name">Ваше имя:</label>
-							<input id="name" class="form-control" name="name" required type="text" placeholder="Иванов Иван Иванович">
-						</div>
-						<div class="form-group">
-							<label for="email">Ваш E-mail:</label>
-							<input id="email" class="form-control" name="email" required type="text" placeholder="ivanov@email.com">
-						</div>
-						<div class="form-group">
-							<label for="phone">Ваш телефон:</label>
-							<input id="phone" class="form-control" name="phone" required type="text" placeholder="+7 (800) 000-00-00">
-						</div>
-						<div class="form-group">
-							<label for="message">Текст сообщения:</label>
-							<textarea id="message" class="form-control" required name="message" rows="4"></textarea>
-						</div>
-						<div class="form-group form-check">
-							<input id="check" class="form-check-input" checked type="checkbox">
-							<label class="form-check-label" for="check">Я добровольно отправляю свои данные</label>
-						</div>
-						<button id="button" class="btn btn-success" type="submit">Отправить</button>
-						<div class="result">
-							<span id="answer"></span>
-							<span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
-						</div>
-					</form>
+						<form id="contactForm" action="handler.php" method="post">
+							<div class="form__container">
+								<input id="phone" type="text" class="form__input" name="phone"  placeholder="Ваш № телефона*"/>
+								<input id="name" type="text" class="form__input" name="name"  placeholder="Ваше имя*"/>
+							</div>
+							<div class="form__container">
+								<div class="form__checkbox-container">
+								<input id="check" class="form__checkbox" checked type="checkbox">
+								<label class="form__checkbox-label" for="check">Я добровольно отправляю свои данные*</label>
+								</div>
+							</div>
+							<button id="button" type="submit" class="button form" value="Отправить">Отправить</button>
+							<div class="result">
+								<span id="answer"></span>
+								<span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
+							</div>
+						</form>
 				</div>
 			</div>
 		</div>
@@ -344,16 +337,16 @@
 	<!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
 	<!--Select and manipulate your video-->
 <!-- 	<script type="text/javascript">
-	    //Select the #embeddedVideo element
-	    var video = document.getElementById('embeddedVideo');
+		//Select the #embeddedVideo element
+		var video = document.getElementById('embeddedVideo');
 
-	    //Create a new Vimeo.Player object
-	    var player = new Vimeo.Player(video);
+		//Create a new Vimeo.Player object
+		var player = new Vimeo.Player(video);
 
-	    //When the player is ready, set the volume to 0
-	    player.ready().then(function() {
-	        player.setVolume(0);
-	    });
+		//When the player is ready, set the volume to 0
+		player.ready().then(function() {
+			player.setVolume(0);
+		});
 	</script> -->
 	<script src="js/scripts.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

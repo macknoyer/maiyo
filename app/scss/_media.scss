@@ -10,6 +10,11 @@
 
 // ≥992px
 @include media-breakpoint-down(md) {
+	.button {
+		margin-right: 0;
+		width: 100%;
+		display: block;
+	}
 		.video-background {
 			// display: none;
 			width: 100%;
