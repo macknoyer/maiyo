@@ -33,14 +33,13 @@
 	<!-- Custom HTML -->
 	<div class="all">	
 	</div>
-		<!-- <div class="vimeo-wrapper"> -->
-<!--    			<iframe id="embeddedVideo" src="https://player.vimeo.com/video/35539348?background=0&autoplay=1&loop=1&byline=0&title=0#t=18s"
-		   frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen data-ready="true"></iframe> -->
-<!-- 			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/35539348?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
-		<!-- </div> -->
-		<div class="video-background" style="width: 100%; height: 100vh;"
+		<!-- <div class="video-background" style="width: 100%; height: 100vh;"
 			data-vide-bg="video/bg.mp4" data-vide-options="loop: false, muted: false, position: 0% 0%">
-		</div>
+		</div> -->
+		<video class="video-background" autoplay muted loop>
+		  <source src="bg.mp4" type="video/mp4">
+		  Your browser does not support HTML5 video.
+		</video>
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<a href="#" class="animated bounceInDown logo">
@@ -273,14 +272,14 @@
 		<div class="row">
 			<div class="col-12 d-lg-flex justify-content-center">
 				<button class="button" alt="Напишите нам" data-toggle="modal" data-target="#exampleModal">Напишите нам</button>
-				<button class="button green" alt="Заполнить анкету">Заполнить анкету</button>
+				<a href="https://forms.yandex.ru/u/5cd9c867bcdf34076e85fc6e/" class="button green" target="_blank">Заполнить анкету</a>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-12">
 			<div class="phones">
-				<a href="tel:+79964038372" class="phones__num">8-(996)-403-83-72</a>
+				<a href="tel:+79964038372" class="phones__num">8-(999)-133-21-94</a>
 			</div>
 		</div>
 	</div>
@@ -304,23 +303,44 @@
 					</button>
 				</div>
 				<div class="modal-body">
-						<form id="contactForm" action="handler.php" method="post">
+						<form action="send.php" method="POST" data-num="1">
 							<div class="form__container">
-								<input id="phone" type="text" class="form__input" name="phone"  placeholder="Ваш № телефона*"/>
-								<input id="name" type="text" class="form__input" name="name"  placeholder="Ваше имя*"/>
+								<div data-type="phone"><input id="phone1" type="text" class="form__input" name="phone"  placeholder="Ваш № телефона*"/></div>
+								<div data-type="name"><input id="name1" type="text" class="form__input" name="name"  placeholder="Ваше имя*"/>
 							</div>
-							<div class="form__container">
+							<!-- <div class="form__container">
 								<div class="form__checkbox-container">
 								<input id="check" class="form__checkbox" checked type="checkbox">
 								<label class="form__checkbox-label" for="check">Я добровольно отправляю свои данные*</label>
 								</div>
-							</div>
-							<button id="button" type="submit" class="button form" value="Отправить">Отправить</button>
-							<div class="result">
-								<span id="answer"></span>
-								<span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
-							</div>
+							</div> -->
+							<button id="uid2" type="submit" class="button form" value="Отправить">Отправить</button>
 						</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel2">Спасибо!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel3">Произошла ошибка. Попробуйте позже.</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
 			</div>
 		</div>

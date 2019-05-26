@@ -3,23 +3,34 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1440px){
+	.options_list li {
+		font-size: 21px;
+	}
+}
 // ≥1200px
 @include media-breakpoint-down(lg) {
+	.options_list li {
+		font-size: 18px;
+	}
 	
 }
-
 // ≥992px
 @include media-breakpoint-down(md) {
+	body{
+		background: url('../img/bg_mobile.jpg') no-repeat;
+		background-size: cover;
+	}
 	.button {
 		margin-right: 0;
 		width: 100%;
 		display: block;
 	}
 		.video-background {
-			// display: none;
-			width: 100%;
-			margin: auto;
-			text-align: center;
+			display: none;
+			// width: 100%;
+			// margin: auto;
+			// text-align: center;
 	}
 	.logo {
 		margin-top: 0px;
