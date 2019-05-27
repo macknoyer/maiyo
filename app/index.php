@@ -33,13 +33,12 @@
 	<!-- Custom HTML -->
 	<div class="all">	
 	</div>
-		<!-- <div class="video-background" style="width: 100%; height: 100vh;"
-			data-vide-bg="video/bg.mp4" data-vide-options="loop: false, muted: false, position: 0% 0%">
-		</div> -->
-		<video class="video-background" autoplay muted loop>
-		  <source src="bg.mp4" type="video/mp4">
-		  Your browser does not support HTML5 video.
-		</video>
+		<div class="video-background-container">
+			<video class="video-background" autoplay muted loop>
+			  <source src="bg.mp4" type="video/mp4">
+			  Your browser does not support HTML5 video.
+			</video>
+		</div>
 		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<a href="#" class="animated bounceInDown logo">
